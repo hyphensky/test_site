@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Главная страница</title>
+	<meta charset="utf-8" >
+	<link rel='stylesheet' href='styles.css' type='text/css'>
+</head>
+<body>
+	<?php if ($result): ?>
+		<?php foreach ($result as $news): ?>
+			<div class='news'>
+			<?= html($news['title']) ?>
+			<br>
+			<?= html($news['datetime']) ?>
+			<br>
+			<?= html($news['description']) ?>
+			</div>
+		<?php endforeach; ?>	
+	<?php endif; ?>	
+<span style="text-align: center">
+<p><a href="/public/newspage.php">Все новости</a></p>
+<p><a href="/public/contactform.php">Обратная связь</a></p>
+</span>
+
+</body>
+
